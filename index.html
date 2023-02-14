@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio html e java</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="NA">Campo A:</label>
+        <input type="number" id="NA" name="NA" required>
+        <label for="NB">Campo B:</label>
+        <input type="number" id="NB" name="NB" required>
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script>
+    const form = document.getElementById('myForm');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita o envio padrão do formulário
+        
+        const NA = parseInt(document.getElementById('NA').value);
+        const NB = parseInt(document.getElementById('NB').value);
+        
+        if (NB > NA) {
+            alert("Formulário válido!"); // Exibe mensagem de sucesso
+        } else {
+          alert("O número B deve ser maior que o número A."); // Exibe mensagem de erro
+        }
+        });
+        </script>
+</body>
+</html>
